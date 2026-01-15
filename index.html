@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Fare Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Fare Prediction</h1>
+        <form method="post">
+            <input type="number" name="airline" placeholder="Airline Code" required>
+            <input type="number" name="stops" placeholder="Total Stops" required>
+            <input type="number" name="duration" placeholder="Duration (minutes)" required>
+            <input type="number" name="day" placeholder="Journey Day" required>
+            <input type="number" name="month" placeholder="Journey Month" required>
+            <button type="submit">Predict Fare</button>
+        </form>
+        {% if prediction %}
+            <h2>Predicted Fare: ₹ {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
